@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - La Alhóndiga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2 fw-bold" href="index.html"> La Alhóndiga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="puestos.html">Puestos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container my-5">
+        <!-- header -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="alert alert-success text-center shadow" role="alert">
+                    <h1 class="display-4 fw-bold mb-3"><i class="bi bi-envelope-heart"></i> Contacta con nosotros</h1>
+                    <p class="lead mb-0">¿Tienes alguna pregunta o sugerencia? Estaremos encantados de atenderte</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulario e información de contacto -->
+        <section class="row mb-5 g-4">
+            <!-- formulario como tal -->
+            <div class="col-lg-8">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-primary text-white">
+                        <h3 class="mb-0"><i class="bi bi-chat-dots"></i> Envíanos un mensaje</h3>
+                    </div>
+                    <div class="card-body p-4">
+                        <form id="contactForm">
+                            <div class="row g-3">
+                                <!-- Nombre -->
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label fw-bold">Nombre completo <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required placeholder="Tu nombre">
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label fw-bold">Correo electrónico <span class="text-danger">*</span></label>
+                                    <input type="email" class="form-control" id="email" name="email" required placeholder="tu@email.com">
+                                </div>
+
+                                <!-- Teléfono -->
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label fw-bold">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="600 123 456">
+                                </div>
+
+                                <!-- Asunto -->
+                                <div class="col-md-6">
+                                    <label for="asunto" class="form-label fw-bold">Asunto <span class="text-danger">*</span></label>
+                                    <select class="form-select" id="asunto" name="asunto" required>
+                                        <option value="">Selecciona un asunto</option>
+                                        <option value="informacion">Información general</option>
+                                        <option value="puestos">Consulta sobre puestos</option>
+                                        <option value="reservas">Reservas en locales</option>
+                                        <option value="sugerencias">Sugerencias</option>
+                                        <option value="otros">Otros</option>
+                                    </select>
+                                </div>
+
+                                <!-- Mensaje -->
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label fw-bold">Mensaje <span class="text-danger">*</span></label>
+                                    <textarea class="form-control" id="mensaje" name="mensaje" rows="6" required placeholder="Escribe tu mensaje aquí..."></textarea>
+                                </div>
+
+                                <!-- Checkbox Privacidad -->
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacidad" name="privacidad" required>
+                                        <label class="form-check-label" for="privacidad">
+                                            He leído y acepto el <a href="#avisoLegal" data-bs-toggle="collapse">aviso legal y la política de privacidad</a> <span class="text-danger">*</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Botón Enviar -->
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <i class="bi bi-send"></i> Enviar mensaje
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Información de contacto -->
+            <div class="col-lg-4">
+                <div class="card shadow-lg h-100">
+                    <div class="card-header bg-success text-white">
+                        <h3 class="mb-0"><i class="bi bi-info-circle"></i> Información</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Dirección -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-geo-alt-fill text-danger fs-3 me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold">Dirección</h5>
+                                    <p class="mb-0">Carrera San Jerónimo S/N <br>28017 Madrid </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Teléfono de contacto -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-telephone-fill text-primary fs-3 me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold">Teléfono</h5>
+                                    <p class="mb-0">
+                                        <a href="tel:+34915312345655" class="text-decoration-none">91 531 23 45 655</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Email de contacto-->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-envelope-fill text-success fs-3 me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold">Email</h5>
+                                    <p class="mb-0">
+                                        <a href="mailto:info@laalhondiga.com" class="text-decoration-none">info@laalhondiga.com</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr>
+
+                        <!-- Horario -->
+                        <div>
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-clock-fill text-warning fs-3 me-3"></i>
+                                <div>
+                                    <h5 class="fw-bold">Horario</h5>
+                                    <p class="mb-0">
+                                        <strong>Lunes a Sábado</strong><br>
+                                        8:00 - 14:30
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- mapa -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow-lg">
+                    <div class="card-header bg-info text-white">
+                        <h3 class="mb-0"><i class="bi bi-map"></i> Cómo llegar a nuestro maravilloso mercado</h3>
+                    </div>
+                    <div class="card-body p-0">
+                        <div class="ratio ratio-16x9">
+                            <iframe 
+                                src="https://www.openstreetmap.org/?#map=19/40.416433/-3.697460" 
+                                style="border: none;"
+                                loading="lazy"
+                                allowfullscreen
+                                aria-label="Mapa de ubicación">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aviso Legal (Colapsable) -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow">
+                    <div class="card-header bg-warning">
+                        <h3 class="mb-0">
+                            <button class="btn btn-link text-dark text-decoration-none fw-bold w-100 text-start" type="button" data-bs-toggle="collapse" data-bs-target="#avisoLegal">
+                                <i class="bi bi-shield-check"></i> Aviso Legal y Política de Privacidad
+                                <i class="bi bi-chevron-down float-end"></i>
+                            </button>
+                        </h3>
+                    </div>
+                    <div id="avisoLegal" class="collapse">
+                        <div class="card-body">
+                            <div class="accordion" id="avisoAccordion">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#responsable">
+                                            Responsable
+                                        </button>
+                                    </h2>
+                                    <div id="responsable" class="accordion-collapse collapse show" data-bs-parent="#avisoAccordion">
+                                        <div class="accordion-body">
+                                            <strong>La Alhóndiga Mercado Tradicional S.L.</strong><br>
+                                            CIF: BVB-23123452336<br>
+                                            Dirección: Cra de S. Jerónimo, s/n, Centro, 28071 Madrid
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#finalidad">
+                                            Finalidad
+                                        </button>
+                                    </h2>
+                                    <div id="finalidad" class="accordion-collapse collapse" data-bs-parent="#avisoAccordion">
+                                        <div class="accordion-body">
+                                            Los datos personales que nos facilites serán utilizados exclusivamente para atender tu consulta o solicitud. No se cederán a terceros salvo obligación legal.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#legitimacion">
+                                            Legitimación
+                                        </button>
+                                    </h2>
+                                    <div id="legitimacion" class="accordion-collapse collapse" data-bs-parent="#avisoAccordion">
+                                        <div class="accordion-body">
+                                            El tratamiento de tus datos se basa en tu consentimiento expreso.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#conservacion">
+                                            Conservación
+                                        </button>
+                                    </h2>
+                                    <div id="conservacion" class="accordion-collapse collapse" data-bs-parent="#avisoAccordion">
+                                        <div class="accordion-body">
+                                            Tus datos se conservarán mientras sean necesarios para atender tu solicitud y durante el plazo legalmente establecido.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header">
+                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#derechos">
+                                            Derechos
+                                        </button>
+                                    </h2>
+                                    <div id="derechos" class="accordion-collapse collapse" data-bs-parent="#avisoAccordion">
+                                        <div class="accordion-body">
+                                            Tienes derecho a acceder, rectificar, suprimir, limitar el tratamiento, oponerte y portabilidad de tus datos. Puedes ejercer estos derechos contactando con nosotros en <a href="mailto:info@laalhondiga.com">info@laalhondiga.com</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 La Alhóndiga - Mercado Tradicional</p>
+        </div>
+    </footer>
+
+    <!-- Esto es la toast de confirmación, se utiliza para darle al usuario feedback de que todo ha salido bien -->
+    <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+        <div id="confirmToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header bg-success text-white">
+                <i class="bi bi-check-circle me-2"></i>
+                <strong class="me-auto">Mensaje enviado</strong>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                Tu mensaje ha sido enviado correctamente. Te responderemos pronto.
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Validaremos el formulario y su envío mediante el usoo de este script sencillo
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Mostrar toast de confirmación
+            const toast = new bootstrap.Toast(document.getElementById('confirmToast'));
+            toast.show();
+            
+            // Resetear formulario al terminar
+            this.reset();
+        });
+    </script>
+</body>
+</html>

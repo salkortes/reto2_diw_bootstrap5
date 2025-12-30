@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puestos - La Alhóndiga</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top shadow">
+        <div class="container-fluid">
+            <a class="navbar-brand fs-2 fw-bold" href="index.html"> La Alhóndiga</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="puestos.html">Puestos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="container mt-3">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Puestos</li>
+            </ol>
+        </nav>
+    </div>
+
+    <main class="container my-5">
+        <!-- Header -->
+        <section class="row mb-5">
+            <div class="col-12">
+                <div class="alert alert-info text-center shadow" role="alert">
+                    <h1 class="display-4 fw-bold mb-3"><i class="bi bi-shop-window"></i> Nuestros Puestos</h1>
+                    <p class="lead mb-0">Haz clic en cualquier tarjeta para descubrir más información</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nav-tabs para todas las categorías -->
+        <ul class="nav nav-pills nav-fill mb-4 shadow-sm" id="categoriasTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="todos-tab" data-bs-toggle="tab" data-bs-target="#todos" type="button" role="tab">
+                    <i class="bi bi-grid-3x3-gap"></i> Todos
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="carnes-tab" data-bs-toggle="tab" data-bs-target="#carnes" type="button" role="tab">
+                    <i class="bi bi-egg-fried"></i> Carnes
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pescados-tab" data-bs-toggle="tab" data-bs-target="#pescados" type="button" role="tab">
+                    <i class="bi bi-water"></i> Pescados
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="verduras-tab" data-bs-toggle="tab" data-bs-target="#verduras" type="button" role="tab">
+                    <i class="bi bi-basket"></i> Verduras
+                </button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="categoriasTabContent">
+            <!-- Todos -->
+            <div class="tab-pane fade show active" id="todos" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                    <!-- Carnicería Abdul -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalAbdul">
+                            <img src="Puestos/carniceria_abdul.bmp" class="card-img-top" alt="Carnicería Abdul" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Carnicería Abdul</h5>
+                                <span class="badge bg-danger">Carnes</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Carnicería Maravilla -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalMaravilla">
+                            <img src="Puestos/carniceria_maravilla.bmp" class="card-img-top" alt="Carnicería Maravilla" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Carnicería Maravilla</h5>
+                                <span class="badge bg-danger">Carnes</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Droguería Kiosko Paco -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalPaco">
+                            <img src="Puestos/drogueria_kiosko_paco.bmp" class="card-img-top" alt="Droguería" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Droguería Kiosko Paco</h5>
+                                <span class="badge bg-secondary">Hogar</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pescadería Itxaso -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalItxaso">
+                            <img src="Puestos/pescaderia_itxaso.bmp" class="card-img-top" alt="Pescadería Itxaso" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Pescadería Itxaso</h5>
+                                <span class="badge bg-info">Pescados</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pescados Javier -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalJavier">
+                            <img src="Puestos/pescados_javier.bmp" class="card-img-top" alt="Pescados Javier" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Pescados Javier</h5>
+                                <span class="badge bg-info">Pescados</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pollería Purita -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalPurita">
+                            <img src="Puestos/polleria_purita.bmp" class="card-img-top" alt="Pollería Purita" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Pollería Purita</h5>
+                                <span class="badge bg-warning text-dark">Aves</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verdulería Enrique -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalEnrique">
+                            <img src="Puestos/verduleria_enrique.bmp" class="card-img-top" alt="Verdulería Enrique" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Verdulería Enrique</h5>
+                                <span class="badge bg-success">Verduras</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Verdulería Wilson -->
+                    <div class="col">
+                        <div class="card h-100 shadow hover-card" data-bs-toggle="modal" data-bs-target="#modalWilson">
+                            <img src="Puestos/verduleria_wilson.bmp" class="card-img-top" alt="Verdulería Wilson" style="height: 200px; object-fit: cover;">
+                            <div class="card-body text-center">
+                                <h5 class="card-title text-primary">Verdulería Wilson</h5>
+                                <span class="badge bg-success">Verduras</span>
+                                <p class="card-text mt-2 small">Haz clic para más información</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carnes Tab -->
+            <div class="tab-pane fade" id="carnes" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalAbdul">
+                            <img src="Puestos/carniceria_abdul.bmp" class="card-img-top" alt="Carnicería Abdul">
+                            <div class="card-body">
+                                <h5 class="card-title">Carnicería Abdul</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalMaravilla">
+                            <img src="Puestos/carniceria_maravilla.bmp" class="card-img-top" alt="Carnicería Maravilla">
+                            <div class="card-body">
+                                <h5 class="card-title">Carnicería Maravilla</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalPurita">
+                            <img src="Puestos/polleria_purita.bmp" class="card-img-top" alt="Pollería Purita">
+                            <div class="card-body">
+                                <h5 class="card-title">Pollería Purita</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pescados Tab -->
+            <div class="tab-pane fade" id="pescados" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalItxaso">
+                            <img src="Puestos/pescaderia_itxaso.bmp" class="card-img-top" alt="Pescadería Itxaso">
+                            <div class="card-body">
+                                <h5 class="card-title">Pescadería Itxaso</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalJavier">
+                            <img src="Puestos/pescados_javier.bmp" class="card-img-top" alt="Pescados Javier">
+                            <div class="card-body">
+                                <h5 class="card-title">Pescados Javier</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Verduras Tab -->
+            <div class="tab-pane fade" id="verduras" role="tabpanel">
+                <div class="row row-cols-1 row-cols-md-2 g-4">
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalEnrique">
+                            <img src="Puestos/verduleria_enrique.bmp" class="card-img-top" alt="Verdulería Enrique">
+                            <div class="card-body">
+                                <h5 class="card-title">Verdulería Enrique</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 shadow" data-bs-toggle="modal" data-bs-target="#modalWilson">
+                            <img src="Puestos/verduleria_wilson.bmp" class="card-img-top" alt="Verdulería Wilson">
+                            <div class="card-body">
+                                <h5 class="card-title">Verdulería Wilson</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modales para cada puesto de nuestro mercado-->
+    
+    <!-- Modal Carnicería Abdul -->
+    <div class="modal fade" id="modalAbdul" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">Carnicería Abdul</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/carniceria_abdul.bmp" class="img-fluid rounded mb-3" alt="Carnicería Abdul">
+                    <p>Carnes halal selectas de primera calidad. Especialistas en shish kebap y en pinchos turcos.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Carninería Maravilla -->
+    <div class="modal fade" id="modalMaravilla" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-danger text-white">
+                    <h5 class="modal-title">Carnicería Maravilla</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/carniceria_maravilla.bmp" class="img-fluid rounded mb-3" alt="Carnicería Maravilla">
+                    <p>Tradición familiar desde 1975. Expertos en despiece y elaborados de charcutería artesanal.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Droguería - Kiosko Paco -->
+    <div class="modal fade" id="modalPaco" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-secondary text-white">
+                    <h5 class="modal-title">Droguería Kiosko Paco</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/drogueria_kiosko_paco.bmp" class="img-fluid rounded mb-3" alt="Droguería">
+                    <p>Todo lo que necesitas para el hogar. Productos de limpieza, menaje y artículos variados.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pescadería Itxaso -->
+    <div class="modal fade" id="modalItxaso" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Pescadería Itxaso</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/pescaderia_itxaso.bmp" class="img-fluid rounded mb-3" alt="Pescadería Itxaso">
+                    <p>Pescado fresco de lonja diariamente. Marisco vivo y especialidades del Cantábrico.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modalde Pescados Javier -->
+    <div class="modal fade" id="modalJavier" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title">Pescados Javier</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/pescados_javier.bmp" class="img-fluid rounded mb-3" alt="Pescados Javier">
+                    <p>Más de 30 años ofreciendo el mejor género. Preparamos y limpiamos el pescado a tu gusto.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pollería Purita -->
+    <div class="modal fade" id="modalPurita" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-warning">
+                    <h5 class="modal-title">Pollería Purita</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/polleria_purita.bmp" class="img-fluid rounded mb-3" alt="Pollería Purita">
+                    <p>Aves de corral de crianza natural. Pollo, pavo, conejo y huevos camperos frescos.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Verdulería Enrique -->
+    <div class="modal fade" id="modalEnrique" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Verdulería Enrique</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/verduleria_enrique.bmp" class="img-fluid rounded mb-3" alt="Verdulería Enrique">
+                    <p>Frutas y verduras de temporada. Productos ecológicos y de huerta local seleccionados.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Frutería Wilson -->
+    <div class="modal fade" id="modalWilson" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title">Verdulería Wilson</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="Puestos/verduleria_wilson.bmp" class="img-fluid rounded mb-3" alt="Verdulería Wilson">
+                    <p>Gran variedad de frutas tropicales y exóticas. Siempre con los mejores precios del mercado.</p>
+                    <p><i class="bi bi-telephone"></i> Teléfono: 953 XX XX XX</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 La Alhóndiga - Mercado Tradicional</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
