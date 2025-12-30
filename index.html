@@ -132,9 +132,15 @@
                             <button class="btn btn-danger btn-lg mb-3" onclick="toggleVideo()">
                                 <i class="bi bi-play-circle" id="videoIcon"></i> Play/Pause
                             </button>
-                            <video id="mercadoVideo" class="w-100 rounded" preload="metadata" style="max-height: 300px;">
-                                <source src="https://artlist.io/stock-footage/clip/market-crowd-london-st-pauls/6541138" type="video/mp4">
+                            <video id="mercadoVideo" preload="metadata" muted class="w-100 rounded">
+                                <source src="market.mp4" type="video/mp4">
                                 Tu navegador no soporta video HTML5.
+                            </video>
+
+<button class="btn btn-success btn-lg mt-3" onclick="toggleVideo()">
+    <i class="bi bi-play-circle" id="videoIcon"></i> Play/Pause
+</button>
+
                             </video>
                         </div>
                     </div>
@@ -304,4 +310,3 @@
     <script src="multimedia.js"></script>
 </body>
 </html>
-Claude
